@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Montserra";
+  src: local("Montserra"),
+   url("./fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  }
+
+body {
+  margin: 0;
+  font-family: 'Montserra', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
