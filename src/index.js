@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './index.css';
 import App from './Pages/Home';
 import Error from './Pages/Error';
+
 import reportWebVitals from './reportWebVitals';
 import './fonts/Montserrat-VariableFont_wght.ttf';
 
@@ -14,6 +15,7 @@ root.render(
     <Router>
       <Routes>
         <Route exact path="/" element={<App />}></Route>
+        <Route exact path="/Accueil" element={<App />}></Route>
         <Route path="*" element={<Error />}></Route>
       </Routes>
     </Router>

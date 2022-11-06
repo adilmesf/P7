@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Header from '../../Components/Header';
 const CardMain = styled.div`
     display:flex;
     flex-direction:column;
@@ -8,12 +9,15 @@ const CardMain = styled.div`
 `
 function Error() {
   return (
-    <CardMain>
-       <div>404</div>
-       <br />
-       <div>Oups! La page que vous demandez n'existe pas.</div>
-       <div>Retourner à la page d'accueil</div>
-    </CardMain>
+    <div className="App">
+      <Header />
+      <CardMain>
+        <div>404</div>
+        <br />
+        <div>Oups! La page que vous demandez n'existe pas.</div>
+        <div>Retourner à la page d'accueil</div>
+      </CardMain>
+    </div>
   );
 }
 
