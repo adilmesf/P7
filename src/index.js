@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './index.css';
 import App from './Pages/Home';
+import Logement from './Pages/Logement';
 import Error from './Pages/Error';
 
 import reportWebVitals from './reportWebVitals';
@@ -16,6 +17,8 @@ root.render(
       <Routes>
         <Route exact path="/" element={<App />}></Route>
         <Route exact path="/Accueil" element={<App />}></Route>
+        <Route exact path="/Logement/:id" element={<Logement />}></Route>
+        <Route exact path="/Logement" element={<Logement />}></Route>
         <Route path="*" element={<Error />}></Route>
       </Routes>
     </Router>

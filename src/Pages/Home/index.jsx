@@ -5,15 +5,17 @@ import DropDown  from '../../Components/DropDown';
 import Data from '../../Data/logements.json'
 import styled from 'styled-components'
 import Header from '../../Components/Header';
+import Footer from '../../Components/Footer';
 
 
 const CardMain = styled.div`
     display:flex;
     flex-wrap:wrap;
-    justify-content:flex-start;
+    justify-content:space-evenly;
     padding-bottom:10px;
     border-radius: 10px;
     width:80%;
+    background-color:#F7F7F7;
 `
 const TagMain = styled.div`
     display:flex;
@@ -37,9 +39,10 @@ function App() {
         <Header />
         <CardMain>
           {Data.map((logement) => (
-            <Card key={logement.id} title={logement.title} img={logement.cover} />
+            <Card key={logement.id} title={logement.title} img={logement.cover} id={logement.id} />
           ))}
         </CardMain>
+        <Footer />
     </div>
   );
 }

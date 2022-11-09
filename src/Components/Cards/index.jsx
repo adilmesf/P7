@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const CardWrapper = styled.div`
     background: rgb(255,96,96);
@@ -21,12 +22,14 @@ const CardImg = styled.img` max-width:100%;
                             height:300px;
                             object-fit: fill;
                               ` 
-function Card({ title,img }) {
+function Card({ title,img, id }) {
     return (
-      <CardWrapper>
-          <CardCover><CardImg src={img} alt="logement" /></CardCover>
-          <CardTitle> {title} </CardTitle>
-      </CardWrapper>
+      <Link to={`/Logement/${id}`} params={{ id }}>
+        <CardWrapper>
+            <CardCover><CardImg src={img} alt="logement" /></CardCover>
+            <CardTitle> {title} </CardTitle>
+        </CardWrapper>
+      </Link>
     )
   }
   
