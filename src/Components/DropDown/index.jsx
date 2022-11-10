@@ -3,40 +3,66 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+
 const DropdownTitle = styled.div`
     background: rgb(255,96,96);
     border-radius: 10px;
-    width:auto;
-    height:auto;
     color:white;
-    padding-left:10px;
-    padding-right:10px;
     margin-right:20px;
     width:582px;
-    height:52px;
+    height:35px;
 `
-const DropDownContent = styled.div`
+const DropDownContentOpen = styled.div`
                         width:582px;
                         height:auto;
+                        background-color:#F7F7F7;
+                        display:flex;
+                        flex-direction:column;
 `
-const DropDownMain = styled.div `display:flex; 
-                               flex-direction:column;`
+const DropDownContentClosed = styled.div`
+                        width:582px;
+                        visibility:hidden;
+                        background-color:#F7F7F7;
+                        display:flex;
+                        flex-direction:column;
+`
 
-function Tag({ title }) {
+function Tag({ titre, data}) {
+    
+    let elementAafficher = ""
     const [ouvert, setOuvert] = useState(false)
-        return (
-            <DropDownMain>
+    if (Array.isArray(data)){
+        elementAafficher = (data.map((Tag, index) => ( <span key={`${index}-${Tag}`}>{Tag}</span>  )))
+    } else {
+        elementAafficher = <span>{data}</span>
+    }
+
+        return ouvert ? 
+        (
+            <div id={titre}>
+                
                 <DropdownTitle>
-                    <span>Equipement</span> 
+                    <span>{titre}</span> 
+                    <FontAwesomeIcon icon={faChevronUp} onClick={() => setOuvert(false)}/>
+                </DropdownTitle>
+                <DropDownContentOpen>
+                    {elementAafficher}
+                </DropDownContentOpen>
+            </div>
+        ) : (
+            <div id={titre}>
+                <DropdownTitle>
+                    <span>{titre}</span> 
                     <FontAwesomeIcon icon={faChevronDown} onClick={() => setOuvert(true)}/>
                 </DropdownTitle>
-                {title.map((Tag) => (
-                    <DropDownContent>{Tag}</DropDownContent>
-                ))}
-            </DropDownMain>
-
+                <DropDownContentClosed>
+                    {elementAafficher}
+                </DropDownContentClosed>
+            </div>            
         )
         
-                }
+    }
   export default Tag
+
+  

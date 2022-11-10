@@ -15,11 +15,11 @@ const TagWrapper = styled.div `display:flex;
                                flex-direction:row;`
 
 
-function Tag({key, title}) {
+function Tag({tag}) {
         return (
             
-            <TagWrapper key={key}>
-                {title.map((Tag, index) => (
+            <TagWrapper>
+                {tag.map((Tag, index) => (
                     <TagContent key={`${Tag}-${index}`}>{Tag}</TagContent>
                 ))}
             </TagWrapper>
