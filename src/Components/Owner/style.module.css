@@ -1,0 +1,18 @@
+.img{
+    max-width: 64px;
+    border-radius: 50%;
+}
+.textOwner{
+    color:#FF6060;
+    font-weight:bold;
+    font-size: 18px;
+    width: min-content;
+    text-align:end;
+    padding-right: 10px;
+}
+.informationOwner{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}

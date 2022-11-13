@@ -10,18 +10,22 @@ const DropdownTitle = styled.div`
     border-radius: 10px;
     color:white;
     margin-right:20px;
-    width:582px;
+    width:100%;
     height:35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 `
 const DropDownContentOpen = styled.div`
-                        width:582px;
+                        width:100%;
                         height:auto;
                         background-color:#F7F7F7;
                         display:flex;
                         flex-direction:column;
 `
 const DropDownContentClosed = styled.div`
-                        width:582px;
+                        width:100%;
                         visibility:hidden;
                         background-color:#F7F7F7;
                         display:flex;
