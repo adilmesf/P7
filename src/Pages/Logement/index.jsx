@@ -1,5 +1,4 @@
 import '../../App.css';
-import styled from 'styled-components'
 import Header from '../../Components/Header'
 import Footer from '../../Components/Footer'
 import Data from '../../Data/logements.json'

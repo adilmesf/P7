@@ -1,0 +1,10 @@
+.elementAproposMain{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.elementApropos{
+    width: 100%;
+    margin-bottom: 30px;
+}

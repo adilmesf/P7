@@ -8,12 +8,10 @@ const CardWrapper = styled.div`
     border-radius: 10px;
     width:340px;
     height:340px;
-    margin-bottom:20px;
-    margin-right:20px;
     display:flex;
     flex-direction:column;
     overflow: hidden;
-    justify-content:space-between;
+    margin-top: 20px;
 `
 const CardTitle = styled.div`color:white;`
 const CardCover = styled.div`width:100%;`

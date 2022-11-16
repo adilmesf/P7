@@ -1,0 +1,39 @@
+.mainCard{
+    margin:0 auto;
+    width: 80%;
+    background-color:#F7F7F7;
+    padding-bottom:10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    width:90%;
+    margin:0 auto;
+}
+.imgAccueil{
+    width: 80%;
+    border-radius: 25px;
+    margin:0 auto;
+    overflow: hidden;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.img{
+    filter:brightness(70%);
+    object-fit: cover;
+    height: inherit;
+    z-index: 1;
+}
+.txtAccueil{
+    color: white;
+    font-size: 48px;
+    position: absolute;
+    left:100px;
+    top:225px;
+    width: 80%;
+    z-index: 2;
+}

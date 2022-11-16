@@ -22,7 +22,7 @@ function Carousel({ img }) {
         compteur.current.innerText = count + 1 + "/" + img.length
         
       },[count,img]);
-console.log(styles.image)
+
     return (
         <div>
             <div id="image" className={styles.image}>

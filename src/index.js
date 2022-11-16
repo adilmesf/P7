@@ -5,6 +5,7 @@ import './index.css';
 import App from './Pages/Home';
 import Logement from './Pages/Logement';
 import Error from './Pages/Error';
+import APropos from './Pages/APropos';
 
 import reportWebVitals from './reportWebVitals';
 import './fonts/Montserrat-VariableFont_wght.ttf';
@@ -17,6 +18,7 @@ root.render(
       <Routes>
         <Route exact path="/" element={<App />}></Route>
         <Route exact path="/Accueil" element={<App />}></Route>
+        <Route exact path="/APropos" element={<APropos />}></Route>
         <Route exact path="/Logement/:id" element={<Logement />}></Route>
         <Route exact path="/Logement" element={<Logement />}></Route>
         <Route path="*" element={<Error />}></Route>
