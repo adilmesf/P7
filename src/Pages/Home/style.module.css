@@ -54,8 +54,12 @@
 }
 
 @media (max-width : 768px) {
+    .mainCard{
+        width: 90%;
+    }
     .imgAccueil{
         height: 111px;
+        width: 90%;
     }
     .imgAccueil::before
     {

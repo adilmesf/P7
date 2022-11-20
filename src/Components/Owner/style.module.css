@@ -4,7 +4,7 @@
 }
 .textOwner{
     color:#FF6060;
-    font-weight:bold;
+    font-weight:500;
     font-size: 18px;
     width: min-content;
     text-align:end;
@@ -15,4 +15,15 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+}
+
+@media (max-width : 768px) {
+    .textOwner{
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .img{
+        max-width: 32px;
+        border-radius: 50%;
+    }
 }

@@ -1,24 +1,19 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 import Logo from '../../Assets/LOGO_footer.png'
+import LogoSmall from '../../Assets/LOGO_footer_small.png'
+import styles from './style.module.css'
 
-const FooterContent = styled.div`height:209px; 
-                                 display:flex; 
-                                 flex-direction:column; 
-                                 width:100%; 
-                                 background-color:black`
-const FooterLogo = styled.div `padding-top:60px;`
-const FooterText = styled.div `color:#FFFFFF;
-                              font-size:24px;
-                              padding-top:40px;`
 
 function Footer(){
     return (
-        <FooterContent>
-          <FooterLogo><img src={Logo} /></FooterLogo>
-          <FooterText>© 2020 Kasa. All rights reserved</FooterText>
-        </FooterContent>
+        <div className={styles.FooterContent}>
+          <div className={styles.FooterLogo} >          
+          <img src={Logo} alt="logo Kasa"
+             srcSet={`${LogoSmall} 768w, ${Logo} 1280w`}
+             sizes="(max-width: 768px) 768px, (max-width: 1280px) 1280px"
+             /></div>
+          <div className={styles.FooterText}>© 2020 Kasa. All rights reserved</div>
+        </div>
       )
 }
 

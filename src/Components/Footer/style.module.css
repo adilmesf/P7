@@ -1,0 +1,21 @@
+.FooterContent{ height:auto; 
+                display:flex; 
+                flex-direction:column; 
+                width:100%; 
+                background-color:black;
+}
+.FooterLogo { padding-top:60px; }
+.FooterText {color:#FFFFFF;
+             font-size:24px;
+             padding-top:40px;
+             padding-bottom: 30px;
+            }
+
+@media (max-width:768px) {
+    .FooterText{
+        font-size: 12px;
+        font-weight: 500;
+        padding-top: 20px;
+    }
+
+}
