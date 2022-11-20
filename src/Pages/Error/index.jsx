@@ -1,22 +1,18 @@
-import styled from 'styled-components'
 import Header from '../../Components/Header';
-const CardMain = styled.div`
-    display:flex;
-    flex-direction:column;
-    width:80%;
-    color:#FF6060;
-    margin:0;
-`
+import Footer from '../../Components/Footer';
+import { Link } from 'react-router-dom'
+import styles from './style.module.css'
+
 function Error() {
   return (
     <div className="App">
       <Header />
-      <CardMain>
-        <div>404</div>
-        <br />
-        <div>Oups! La page que vous demandez n'existe pas.</div>
-        <div>Retourner à la page d'accueil</div>
-      </CardMain>
+      <div id="errorMain" className={styles.errorMain}>
+        <div className={styles.errorNumber}>404</div>
+        <div className={styles.errorText}>Oups! La page que vous demandez n'existe pas.</div>
+        <div className={styles.errorEnd}><Link to="/" className={styles.errorLink}>Retourner à la page d'accueil</Link></div>
+      </div>
+      <Footer />
     </div>
   );
 }

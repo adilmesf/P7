@@ -6,9 +6,9 @@ function Rating({ nb }) {
     var elementAafficher = [];
     for (let i = 1; i <= 5 ; i++){
         if (i <= nb){
-            elementAafficher.push(<img src={StarO} />)
+            elementAafficher.push(<img src={StarO} alt="Kasa Notation" key={i} />)
         } else {
-            elementAafficher.push(<img src={StarG} />)
+            elementAafficher.push(<img src={StarG} alt="Kasa Notation" key={i} />)
         }
     }
     return (

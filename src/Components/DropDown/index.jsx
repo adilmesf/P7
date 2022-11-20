@@ -4,33 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
-
-const DropdownTitle = styled.div`
-    background: rgb(255,96,96);
-    border-radius: 10px;
-    color:white;
-    margin-right:20px;
-    width:100%;
-    height:35px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-`
-const DropDownContentOpen = styled.div`
-                        width:100%;
-                        height:auto;
-                        background-color:#F7F7F7;
-                        display:flex;
-                        flex-direction:column;
-`
-const DropDownContentClosed = styled.div`
-                        width:100%;
-                        visibility:hidden;
-                        background-color:#F7F7F7;
-                        display:flex;
-                        flex-direction:column;
-`
+import styles from './style.module.css'
 
 function Tag({ titre, data}) {
     
@@ -44,25 +18,24 @@ function Tag({ titre, data}) {
 
         return ouvert ? 
         (
-            <div id={titre}>
-                
-                <DropdownTitle>
+            <div id={titre}> 
+                <div className={styles.DropdownTitle}>
                     <span>{titre}</span> 
-                    <FontAwesomeIcon icon={faChevronUp} onClick={() => setOuvert(false)}/>
-                </DropdownTitle>
-                <DropDownContentOpen>
+                    <FontAwesomeIcon icon={faChevronUp} onClick={() => setOuvert(false)} className={styles.down}/>
+                </div>
+                <div className={styles.DropDownContentOpen}>
                     {elementAafficher}
-                </DropDownContentOpen>
+                </div>
             </div>
         ) : (
             <div id={titre}>
-                <DropdownTitle>
+                <div className={styles.DropdownTitle}>
                     <span>{titre}</span> 
-                    <FontAwesomeIcon icon={faChevronDown} onClick={() => setOuvert(true)}/>
-                </DropdownTitle>
-                <DropDownContentClosed>
+                    <FontAwesomeIcon icon={faChevronDown} onClick={() => setOuvert(true)} className={styles.up}/>
+                </div>
+                <div className={styles.DropDownContentClosed}>
                     {elementAafficher}
-                </DropDownContentClosed>
+                </div>
             </div>            
         )
         

@@ -6,7 +6,7 @@ import Respect from '../../Components/DropDownBig'
 import Service from '../../Components/DropDownBig'
 import Securite from '../../Components/DropDownBig'
 import styles from './style.module.css'
-
+import imgApropos from '../../Assets/IMG_apropos.png'
 
 function APropos() {
     
@@ -20,6 +20,9 @@ function APropos() {
     <div className="App">
         
         <Header />
+        <div className={styles.imgAPropos}>
+          <img src={imgApropos} alt="Kasa accueil" className={styles.img} />
+        </div>
         <div className={styles.elementAproposMain}>
             <div className={styles.elementApropos}>
                 <Fiabilite  key="Fiabilite" titre="Fiabilité" data={fiabilite} />

@@ -18,7 +18,29 @@ nav{
     color:#FF6060;
     padding-left:50px;
     text-decoration:none;
+    font-size: 24px;
+    font-weight: 500;
 }
 .link:hover{
     text-decoration: underline;
+}
+
+@media (max-width : 768px) {
+    .link{
+        color:#FF6060;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        width: 40%;
+        justify-content: flex-end;
+    }
+    .link{
+        padding-left:10px;
+    }
+    .headerContent{
+        width:90%; 
+    }
 }

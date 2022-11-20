@@ -3,8 +3,22 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    margin-bottom: 50px;
 }
 .elementApropos{
     width: 100%;
     margin-bottom: 30px;
+}
+.imgAPropos{
+    width: 80%;
+    border-radius: 25px;
+    margin:0 auto;
+    overflow: hidden;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.imgAPropos img{
+    filter:brightness(70%);
+    object-fit: cover;
+    height: inherit;
 }

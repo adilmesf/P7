@@ -1,0 +1,20 @@
+.cardLink{
+    text-decoration: none;
+    color:white;
+}
+.imageCover{
+    width:100%;
+    height: 340px;
+}
+.cardTitle{
+    color:white;
+    text-align:left;
+    padding-left: 10px;
+    font-size: 18px;
+    word-wrap: break-word;
+    height: 52px;
+}
+
+@media (max-width : 768px) {
+
+}

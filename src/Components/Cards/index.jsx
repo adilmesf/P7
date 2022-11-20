@@ -1,34 +1,39 @@
 import React from 'react'
-import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import styles from './style.module.css'
+import styled from 'styled-components'
 
-const CardWrapper = styled.div`
-    background: rgb(255,96,96);
-    background: linear-gradient(180deg, rgba(255,96,96,1) 0%, rgba(0,0,0,1) 90%);
-    border-radius: 10px;
-    width:340px;
-    height:340px;
-    display:flex;
-    flex-direction:column;
-    overflow: hidden;
-    margin-top: 20px;
+const Cardmain = styled.div`
+  background: rgb(255,96,96);
+  border-radius: 10px;
+  width:340px;
+  height:340px;
+  display:flex;
+  flex-direction:column;
+  overflow: hidden;
+  margin-top: 20px;    
+  background-image: url(${props => props.img});
+  justify-content:flex-end;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (max-width: 768px) {
+    height:255px;
+    width:335px;
+  }
 `
-const CardTitle = styled.div`color:white;`
-const CardCover = styled.div`width:100%;`
-const CardImg = styled.img` max-width:100%;
-                            max-height:100%;
-                            height:300px;
-                            object-fit: fill;
-                              ` 
 function Card({ title,img, id }) {
     return (
-      <Link to={`/Logement/${id}`} params={{ id }}>
-        <CardWrapper>
-            <CardCover><CardImg src={img} alt="logement" /></CardCover>
-            <CardTitle> {title} </CardTitle>
-        </CardWrapper>
+      <Link to={`/Logement/${id}`} params={{ id }} className={styles.cardLink}>
+        <Cardmain key={id} img={img}>
+            <span className={styles.cardTitle} key={`titre-${id}`}> {title} </span>
+        </Cardmain>
       </Link>
     )
   }
   
   export default Card
+
+  /* <img src={img} alt="logement" className={styles.imageCover}/> 
+  <div className={styles.cardMain} key={id}>
+  <span className={styles.cardTitle} key={`titre-${id}`}> {title} </span>
+</div>*/

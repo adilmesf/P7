@@ -10,6 +10,7 @@ const TagContent = styled.div`
     padding-left:10px;
     padding-right:10px;
     margin-right:20px;
+    margin-top: 10px;
 `
 const TagWrapper = styled.div `display:flex; 
                                flex-direction:row;`
