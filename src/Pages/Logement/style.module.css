@@ -77,6 +77,7 @@
     }
     .TagMain{
         flex-direction: row-reverse;
+        flex-wrap: wrap;
     }
     .titreLogement{
         font-size: 18px;
@@ -84,7 +85,7 @@
     }
     .elementsLogement{
         flex-direction: column;
-        width: 90%;
+        width: 100%;
     }
     .elementsDescription{
         width: 100%;
@@ -97,5 +98,8 @@
     }
     .ratingMain{
         align-items: center;
+    }
+    .logementMain{
+        width: 90%; 
     }
 }

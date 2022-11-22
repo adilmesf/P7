@@ -22,3 +22,10 @@
     object-fit: cover;
     height: inherit;
 }
+
+@media (max-width : 768px) {
+    .elementAproposMain, .imgAPropos, .elementAproposMain{ 
+        width: 90%;
+    }
+}
+

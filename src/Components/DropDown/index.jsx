@@ -10,16 +10,16 @@ function Tag({ titre, data}) {
     let elementAafficher = ""
     const [ouvert, setOuvert] = useState(false)
     if (Array.isArray(data)){
-        elementAafficher = (data.map((Tag, index) => ( <span key={`${index}-${Tag}`}>{Tag}</span>  )))
+        elementAafficher = (data.map((Tag, index) => ( <span key={`${index}-${Tag}`} className={styles.textDropDown}>{Tag}</span>  )))
     } else {
-        elementAafficher = <span>{data}</span>
+        elementAafficher = <span className={styles.textDropDown}>{data}</span>
     }
 
         return ouvert ? 
         (
-            <div id={titre}> 
+            <div id={titre} className={styles.DropdownMain}> 
                 <div className={styles.DropdownTitle}>
-                    <span>{titre}</span> 
+                    <span className={styles.DropdownTitre}>{titre}</span> 
                     <FontAwesomeIcon icon={faChevronUp} onClick={() => setOuvert(false)} className={styles.down}/>
                 </div>
                 <div className={styles.DropDownContentOpen}>
@@ -27,9 +27,9 @@ function Tag({ titre, data}) {
                 </div>
             </div>
         ) : (
-            <div id={titre}>
+            <div id={titre}  className={styles.DropdownMain}>
                 <div className={styles.DropdownTitle}>
-                    <span>{titre}</span> 
+                    <span className={styles.DropdownTitre}>{titre}</span> 
                     <FontAwesomeIcon icon={faChevronDown} onClick={() => setOuvert(true)} className={styles.up}/>
                 </div>
                 <div className={styles.DropDownContentClosed}>

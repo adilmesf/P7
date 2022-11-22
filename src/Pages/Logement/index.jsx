@@ -61,7 +61,6 @@ function Logement() {
                   ))}            
             </div>
 
-
             <div id="TagMain">
               {Data.map((logement, index) => (
                 logement.id === id ?

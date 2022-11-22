@@ -45,13 +45,26 @@
     padding-right:10px;
     font-size:24px;    
 }
+.textDropDown{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 @media (max-width : 768px) {
     .DropdownTitle{
         font-size: 13px;
         font-weight: 500;
+        margin-right: 0px;
+        padding-right: 0px;
+        padding-left: 0px;
     }
     .DropDownContentClosed, .DropDownContentOpen{
         font-size: 12px;
         font-weight: 400;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .DropdownTitre{
+        padding-left: 10px;
     }
 }
