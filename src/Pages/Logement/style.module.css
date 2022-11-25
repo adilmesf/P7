@@ -44,10 +44,12 @@
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 .ratingMain{
     display:flex;
     vertical-align: middle;
+    margin-top: 10px;
 }
 .zoneDescription{
     display:flex;

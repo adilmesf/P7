@@ -1,6 +1,7 @@
 .cardLink{
     text-decoration: none;
     color:white;
+    padding-right: 10px;
 }
 .imageCover{
     width:100%;
@@ -12,9 +13,5 @@
     padding-left: 10px;
     font-size: 18px;
     word-wrap: break-word;
-    height: 52px;
-}
-
-@media (max-width : 768px) {
-
+    /*height: 52px;*/
 }

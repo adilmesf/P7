@@ -9,16 +9,12 @@ function Tag({ titre, data}) {
     
     let elementAafficher = ""
     const [ouvert, setOuvert] = useState(false)
-    if (Array.isArray(data)){
-        elementAafficher = (data.map((Tag, index) => ( <span key={`${index}-${Tag}`} className={styles.textDropDown}>{Tag}</span>  )))
-    } else {
-        elementAafficher = <span  className={styles.textDropDown}>{data}</span>
-    }
+
+        elementAafficher = <p  className={styles.textDropDown}>{data}</p>
 
         return ouvert ? 
         (
             <div id={titre}>
-                
                 <div className={styles.DropdownTitle}>
                     <span className={styles.DropdownTitre}>{titre}</span> 
                     <FontAwesomeIcon icon={faChevronUp} onClick={() => setOuvert(false)} className={styles.down}/>

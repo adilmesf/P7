@@ -17,6 +17,7 @@
     padding-bottom:10px;
     padding-left:10px;
     padding-right:10px;
+    border-radius: 10px;
 }
 
 .DropDownContentClosed{
@@ -30,6 +31,7 @@
     font-size:24px;
     color:#FF6060;
     text-align:left;
+    border-radius: 10px;
 }
 .DropdownTitle{
     background: rgb(255,96,96);
@@ -41,22 +43,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left:10px;
-    padding-right:10px;
+    /*padding-left:10px;
+    padding-right:10px;*/
     font-size:24px;    
 }
 .textDropDown{
-    width: 100%;
     padding-left: 10px;
     padding-right: 10px;
 }
+.DropdownTitre{
+    padding-left: 10px;
+}
 @media (max-width : 768px) {
     .DropdownTitle{
-        font-size: 13px;
-        font-weight: 500;
-        margin-right: 0px;
-        padding-right: 0px;
-        padding-left: 0px;
+        font-size:      13px;
+        font-weight:    500;
+        margin-right:   0px;
+        padding-right:  0px;
+        padding-left:   0px;
     }
     .DropDownContentClosed, .DropDownContentOpen{
         font-size: 12px;
@@ -64,7 +68,5 @@
         padding-left: 0px;
         padding-right: 0px;
     }
-    .DropdownTitre{
-        padding-left: 10px;
-    }
+
 }

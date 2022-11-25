@@ -3,6 +3,7 @@
     height: 415px;
     border: 1px solid white;
     border-radius: 25px;
+    position:relative;
 }
 .image_img{
     max-width:100%;
@@ -15,16 +16,16 @@
 .chevron_down{
     position: absolute;
     left:150px;
-    top:300px;
+    top:168px;
 }
 .chevron_up{
     position: absolute;
     right:150px;
-    top:300px;
+    top:168px;
 }
 .compteur{
     position: absolute;
-    bottom:235px;
+    bottom:47px;
     left: 0;
     right: 0;
     margin: auto;
@@ -34,14 +35,14 @@
 @media (max-width : 768px) {
     .chevron_down{
         left: 90px;
-        top: 252px;
+        top: 122px;
     }
     .chevron_up{
         right: 90px;
-        top: 252px;
+        top: 122px;
     }
     .compteur{
-        bottom: 385px;
+        bottom: 21px;
     }
     .image{
         height: 255px;

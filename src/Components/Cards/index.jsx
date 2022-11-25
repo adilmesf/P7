@@ -32,8 +32,3 @@ function Card({ title,img, id }) {
   }
   
   export default Card
-
-  /* <img src={img} alt="logement" className={styles.imageCover}/> 
-  <div className={styles.cardMain} key={id}>
-  <span className={styles.cardTitle} key={`titre-${id}`}> {title} </span>
-</div>*/
