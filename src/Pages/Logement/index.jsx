@@ -61,7 +61,7 @@ function Logement() {
                   ))}            
             </div>
 
-            <div id="TagMain">
+            <div id="TagMain" className={styles.TagPrincipal}>
               {Data.map((logement, index) => (
                 logement.id === id ?
                   (

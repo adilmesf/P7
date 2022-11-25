@@ -43,6 +43,7 @@
     margin: 0 auto;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
     margin-bottom: 20px;
     margin-top: 10px;
 }
@@ -71,7 +72,11 @@
 .elementsEquipements{
     width:48%;
 }
-
+.TagPrincipal{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
 @media (max-width : 768px) {
     .InfoMain{
         display:flex;
@@ -80,6 +85,9 @@
     .TagMain{
         flex-direction: row-reverse;
         flex-wrap: wrap;
+    }
+    .TagPrincipal{
+        width: 100%;
     }
     .titreLogement{
         font-size: 18px;
