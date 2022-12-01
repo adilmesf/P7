@@ -5,14 +5,15 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import styles from './style.module.css'
 
-function Tag({ titre, data}) {
+function Tag({ titre, data, size}) {
     
-    let elementAafficher = ""
+    let elementAAfficher = ""
     const [ouvert, setOuvert] = useState(false)
+
     if (Array.isArray(data)){
-        elementAafficher = (data.map((Tag, index) => ( <span key={`${index}-${Tag}`} className={styles.textDropDown}>{Tag}</span>  )))
+        elementAAfficher = (data.map((Tag, index) => ( <span key={`${index}-${Tag}`} className={styles.textDropDown}>{Tag}</span>  )))
     } else {
-        elementAafficher = <span className={styles.textDropDown}>{data}</span>
+        elementAAfficher = <span className={styles.textDropDown}>{data}</span>
     }
 
         return ouvert ? 
@@ -23,7 +24,7 @@ function Tag({ titre, data}) {
                     <FontAwesomeIcon icon={faChevronUp} onClick={() => setOuvert(false)} className={styles.down}/>
                 </div>
                 <div className={styles.DropDownContentOpen}>
-                    {elementAafficher}
+                    {elementAAfficher}
                 </div>
             </div>
         ) : (
@@ -33,7 +34,7 @@ function Tag({ titre, data}) {
                     <FontAwesomeIcon icon={faChevronDown} onClick={() => setOuvert(true)} className={styles.up}/>
                 </div>
                 <div className={styles.DropDownContentClosed}>
-                    {elementAafficher}
+                    {elementAAfficher}
                 </div>
             </div>            
         )

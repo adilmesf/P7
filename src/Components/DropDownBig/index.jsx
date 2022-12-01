@@ -7,10 +7,10 @@ import styles from './style.module.css'
 
 function Tag({ titre, data}) {
     
-    let elementAafficher = ""
+    let elementAAfficher = ""
     const [ouvert, setOuvert] = useState(false)
 
-        elementAafficher = <p  className={styles.textDropDown}>{data}</p>
+    elementAAfficher = <p className={styles.textDropDown}>{data}</p>
 
         return ouvert ? 
         (
@@ -20,7 +20,7 @@ function Tag({ titre, data}) {
                     <FontAwesomeIcon icon={faChevronUp} onClick={() => setOuvert(false)} className={styles.down}/>
                 </div>
                 <div className={styles.DropDownContentOpen}>
-                    {elementAafficher}
+                    {elementAAfficher}
                 </div>
             </div>
         ) : (
@@ -30,7 +30,7 @@ function Tag({ titre, data}) {
                     <FontAwesomeIcon icon={faChevronDown} onClick={() => setOuvert(true)} className={styles.up}/>
                 </div>
                 <div className={styles.DropDownContentClosed}>
-                    {elementAafficher}
+                    {elementAAfficher}
                 </div>
             </div>            
         )
