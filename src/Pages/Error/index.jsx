@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import styles from './style.module.css'
 
 function Error() {
+  document.title = "KASA - Location immobilière - Erreur";
   return (
     <div className="App">
       <Header />

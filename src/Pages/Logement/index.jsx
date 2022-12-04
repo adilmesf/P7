@@ -16,7 +16,7 @@ function Logement() {
 
   const { id } = useParams()
   const navigate = useNavigate();
-
+  document.title = "KASA - Location immobilière - Logement";
   /* redirection si la référence saisie est fausse */
   useEffect(() => {
     const index = Data.findIndex(object => {
@@ -85,10 +85,10 @@ function Logement() {
                   (
                   <div className={styles.elementsLogement} key={`elementsLogement-${index}`}>
                     <div className={styles.elementsDescription} key={`elementsDescription-${index}`}>
-                      <Description key={`${index}`-1} titre="Description" data={logement.description}  />
+                      <Description key={`${index}`-1} titre="Description" data={logement.description} size={"small"}  />
                     </div>
                     <div className={styles.elementsEquipements} key={`elementsEquipement-${index}`}>
-                      <Equipment   key={`${index}`-2} titre="Equipements" data={logement.equipments}  />
+                      <Equipment   key={`${index}`-2} titre="Equipements" data={logement.equipments} size={"small"} />
                     </div>
                   </div>
                   )

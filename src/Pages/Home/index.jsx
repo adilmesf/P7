@@ -6,6 +6,7 @@ import Footer from '../../Components/Footer';
 import styles from './style.module.css'
 
 function App() {
+  document.title = "KASA - Location immobilière - Accueil";
   return (
     <div className="App">
         <Header />
