@@ -20,7 +20,6 @@ root.render(
         <Route exact path="/Accueil" element={<App />}></Route>
         <Route exact path="/APropos" element={<APropos />}></Route>
         <Route exact path="/Logement/:id" element={<Logement />}></Route>
-        <Route exact path="/Logement" element={<Logement />}></Route>
         <Route path="*" element={<Error />}></Route>
       </Routes>
     </Router>
