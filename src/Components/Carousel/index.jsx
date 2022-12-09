@@ -25,18 +25,22 @@ function Carousel({ img }) {
         
       },[count,img]);
 
+      let chevronUp = <img src={ChevronUp} onClick={() => setCount(count + 1)} 
+      srcSet={`${ChevronUpSmall} 768w, ${ChevronUp} 1280w`}
+      sizes="(max-width: 768px) 768px, (max-width: 1280px) 1280px"
+      alt="Kasa Up" className={styles.chevron_up} />;
+
+      let chevronDown = <img src={ChevronDown} onClick={() => setCount(count - 1)} 
+      srcSet={`${ChevronDownSmall} 768w, ${ChevronDown} 1280w`}
+      sizes="(max-width: 768px) 768px, (max-width: 1280px) 1280px"
+      alt="Kasa Down" className={styles.chevron_down}/>;
+
     return (
         <div>
             <div id="image" className={styles.image}>
                 <img id="0" src={img[0]} alt="Logement Kasa" ref={ref} className={styles.image_img}/>
-                <img src={ChevronDown} onClick={() => setCount(count - 1)} 
-                     srcSet={`${ChevronDownSmall} 768w, ${ChevronDown} 1280w`}
-                     sizes="(max-width: 768px) 768px, (max-width: 1280px) 1280px"
-                     alt="Kasa Down" className={styles.chevron_down}/>
-                <img src={ChevronUp} onClick={() => setCount(count + 1)} 
-                     srcSet={`${ChevronUpSmall} 768w, ${ChevronUp} 1280w`}
-                     sizes="(max-width: 768px) 768px, (max-width: 1280px) 1280px"
-                     alt="Kasa Up" className={styles.chevron_up} />
+                {img.length !== 1 ? chevronDown : ""}
+                {img.length !== 1 ? chevronUp : ""}
                 <span ref={compteur} className={styles.compteur}>1/{img.length}</span>
             </div>
         </div>
